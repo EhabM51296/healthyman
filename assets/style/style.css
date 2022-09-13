@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+:root {
+    --mainColor: #7CB908;
+    --mainColor2: white;
+    --mainColor3: #0A0D1D;
+  }
+/* --------------------------------------------------font section----------------------------------- */
+@font-face {
+    font-family: boldText;
+    src: url(../fonts/Barlow-Bold.ttf);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: medText;
+    src: url(../fonts/Barlow-Medium.ttf);
+    font-style: normal;
+    font-weight: medium;
+}
+@font-face {
+    font-family: lightText;
+    src: url(../fonts/Barlow-Light.ttf);
+    font-style: normal;
+    font-weight: light;
+}
+/* ------------------------------------------------------------------------text sizes ---------------------------------------------------- */
+
+.title{
+    font-size: 60px;
+    font-family: boldText;
+}
+.sectionTitle{
+    font-size: 48px;
+    font-family: boldText;
+}
+.miniTitle{
+    font-size: 32px;
+    font-family: boldText;
+    margin-bottom: 20px;
+}
+.medText{
+    font-size: 19px;
+    font-family: medText;
+}
+.lightText{
+    font-size: 16px;
+    font-family: lightText;
+}
+
+/* ------------------------------------------------------text colors ------------------------------------------ */
+.mainColor{
+    color:var(--mainColor);
+}
+.mainColor2{
+    color: var(--mainColor2);
+}
+.mainColor3{
+    color: var(--mainColor3);
+}
+/* --------------------------------------------------text align ----------------------------------------- */
+.textCenter{
+    text-align: center;
+}
+/* ------------------------------------------------------text decorations------------------------------- */
+.textDecorationZero{
+    text-decoration: none;
+}
+/* --------------------------------------------background colors ------------------------------------- */
+.bgGrey{
+    background-color: #F5F5F5;
+}
+/* ---------------------------------------------------grid style--------------------------------------- */
+.grid3{
+    display: grid;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 3.33%;
+    row-gap: 50px;
+}
+.grid3 > div{
+    padding: 20px;
+}
+/* -------------------------------------------------------margin section----------------------------------- */
+.mgAuto{
+    margin: auto;
+}
+.mgTop-20{
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------header section----------------------------------- */
+#header{
+    width: 100%;
+    position: relative;
+}
+#headerCover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11,15,41,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imageBackground{
+    width: 100%;
+}
+
+#navbar{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
+
+#headerLogo{
+    flex-basis: 30%;
+}
+#headerLinks{
+    flex-basis: 70%;
+}
+#headerLinks a{
+    transition: color 0.5s;
+}
+#headerLinks a:hover{
+    color: var(--mainColor);
+}
+#headerLinks a.boxButton{
+    background-color: var(--mainColor);
+    padding: 10px 15px;
+    transition: background-color 0.5s;
+    border: 2px solid var(--mainColor);
+}
+#headerLinks a.boxButton:hover{
+    background-color: transparent;
+}
+#navbar ul li{
+    display: inline-block;
+    width: 20%;
+}
+#headerContent{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#headerContent h1,#headerContent h3,#headerContent p{
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+}
+/* ---------------------------------------------------------sections in general---------------------------------------- */
+.section{
+    width: 100%;
+    padding: 35px 0px;
+}
+.section h1{
+    text-align: center;
+}
+.oddSection{
+    background-color: var(--mainColor2);
+}
+.oddSection .sectionTitle{
+    color: var(--mainColor3);
+}
+.evenSection{
+    background-color: var(--mainColor3);
+}
+.evenSection .sectionTitle{
+    color: var(--mainColor);
+}
+
+/* -------------------------------------------------services Section ----------------------------------------------------- */
+.serviceBox{
+    transition: background-color 0.5s;
+}
+.serviceBox:hover{
+    background-color: var(--mainColor);
+}
+.serviceBox:hover h1,.serviceBox:hover a{
+    color: var(--mainColor3);
+}
+.serviceBox:hover p{
+    color: var(--mainColor2);
+}
+
+/* ---------------------------------------- Team Section ------------------------------------------------------------ */
+#teamMembers .wrapper{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    display: flex;
+    column-gap: 5%;
+}
+
+#teamMembers .member{
+   flex: 1 0 30%;
+   position: relative;
+   transition: margin-left 0.5s;
+}
+.member img{
+    width: 100%;
+}
+.memberDetails{
+    background-color: var(--mainColor);
+    text-align: center;
+    padding: 10px 0px;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+/* --------------------------------------------------------Arrows section ------------------------------------------------- */
+.arrowContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+.leftArrow,.rightArrow{
+    width: 50px;
+    height: 50px;
+    background-color: var(--mainColor);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftArrow:hover, .rightArrow:hover{
+    background-color: var(--mainColor2);
+}
+.leftArrow:hover::after{
+    border: solid var(--mainColor3);
+    border-width: 0px 0px 3px 3px;
+
+}
+.rightArrow:hover::after{
+    border: solid var(--mainColor3);
+    border-width: 0px 3px 3px 0px;
+    
+}
+.leftArrow::after{
+    content: "";
+    border: solid var(--mainColor2);
+    border-width: 0px 0px 3px 3px;
+    padding: 3px;
+    transform: rotate(45deg) translateX(25%);
+   
+}
+.rightArrow::after{
+    content: "";
+    border: solid var(--mainColor2);
+    border-width: 0px 3px 3px 0px;
+    padding: 3px;
+    transform: rotate(-45deg) translateX(-25%);
+
+   
+}
+
+/* ----------------------------------------------------goal section --------------------------------------- */
+#goal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.specialDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: var(--mainColor);
+
+}
+.specialDiv::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--mainColor2);
+    transform: translateY(-20%) skew(0deg, 5deg);
+}
+.specialDiv::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--mainColor2);
+    transform: translateY(-20%) skew(0deg, -5deg);
+}
+.specialDiv .sectionTitle{
+    padding-top: 40px;
+}
+#goal > div{
+    flex-basis: 50%;
+}
+.goalDescription{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+.goalIcon{
+    flex-basis: 15%;
+}
+.circleIcon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:  var(--mainColor);
+}
+
