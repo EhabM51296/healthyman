@@ -16,9 +16,12 @@
     <div class="mainDiv">
         <?php
         require $componentLocation."header.php";
+        require $componentLocation."gridProject.php";
         require $componentLocation."services.php";
         require $componentLocation."team.php";
         require $componentLocation."goal.php";
+        require $componentLocation."plans.php";
+        require $componentLocation."slider.php";
         ?>
     </div>
 </body>
