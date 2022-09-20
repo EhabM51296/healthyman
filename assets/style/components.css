@@ -1,0 +1,389 @@
+/* --------------------------------------------------header section----------------------------------- */
+
+#headerCover{
+    background-color: rgba(11,15,41,0.5);
+}
+
+#navbar{
+    top: 0;
+    padding: 25px 10px;
+    width: 100%;
+    z-index: 9999;
+    background-color: var(--mainColor3);
+}
+
+#headerLogo{
+    flex-basis: 30%;
+}
+#headerLinks{
+    flex-basis: 70%;
+}
+#headerLinks a{
+    transition: color 0.5s;
+}
+#headerLinks a:hover{
+    color: var(--mainColor);
+}
+#navbar ul{
+   opacity: 1;
+}
+#navbar ul li{
+    display: inline-block;
+    width: 20%;
+
+}
+.burgerNav{
+    width: 35px;
+    height: 35px;
+    background-color: var(--mainColor);
+    margin-left: auto;
+    border-radius: 5px;
+    display: none;
+    position: relative;
+    cursor: pointer;
+}
+.burgerNav::after{
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 90%;
+   height: 25%;
+   border-top: 1px solid var(--mainColor2);
+   border-bottom: 1px solid var(--mainColor2);
+   transform: translate(-50%,-50%);
+}
+#headerContent h1,#headerContent h3,#headerContent p{
+    width: 50%;
+    margin: auto;
+    padding-top: 10px;
+}
+@media(min-width:769px)
+{
+    #headerLinks a.boxButton{
+        background-color: var(--mainColor);
+        padding: 10px 15px;
+        transition: background-color 0.5s;
+        border: 2px solid var(--mainColor);
+    }
+    #headerLinks a.boxButton:hover{
+        background-color: transparent;
+    }
+}
+@media(max-width:768px)
+{
+   
+    .burgerNav{
+        display: block;
+     }
+    #headerLinks ul{
+        position: absolute;
+        top: 100%;
+        left:-110%;
+        width: 100%;
+        background-color: var(--mainColor3);
+        z-index: 9999;
+        padding: 10px 0px;
+        transition: left 0.5s;
+    }
+    #navbar ul li{
+        display: block;
+        width: 100%;
+        text-align: center;
+    
+    }
+
+}
+@media(max-width:580px)
+{
+    #headerContent h1,#headerContent h3,#headerContent p{
+        width: 100%;
+        padding-top: 10px;
+    }
+    
+}
+@media(max-width:450px)
+{
+    .burgerNav{
+       width: 25px;
+       height: 25px;
+    }
+    #navbar{
+        padding: 12px 10px;
+    }
+}
+
+/* ---------------------------------------------------------sections in general---------------------------------------- */
+.section{
+    width: 100%;
+    padding: 35px 0px;
+}
+.section h1{
+    text-align: center;
+}
+.oddSection{
+    background-color: var(--mainColor2);
+}
+.oddSection .sectionTitle{
+    color: var(--mainColor3);
+}
+.evenSection{
+    background-color: var(--mainColor3);
+}
+.evenSection .sectionTitle{
+    color: var(--mainColor);
+}
+
+/* -------------------------------------------------services Section ----------------------------------------------------- */
+.serviceBox{
+    transition: background-color 0.5s;
+    box-shadow: 5px 5px 5px 1px var(--mainColor3);
+}
+.serviceBox:hover{
+    background-color: var(--mainColor);
+}
+.serviceBox:hover h1,.serviceBox:hover a{
+    color: var(--mainColor3);
+}
+.serviceBox:hover p{
+    color: var(--mainColor2);
+}
+/* -------------------------------------------carousel Section -------------------------------------------------------- */
+.carouselRow .wrapper{
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    column-gap: 5%;
+}
+.carouselRow .BoxItem{
+    flex: 1 0 30%;
+    position: relative;
+    z-index: 5000;
+    transition: 0.5s;
+ }
+
+ .BoxItemDetails{
+     background-color: var(--mainColor);
+     text-align: center;
+     padding: 20px 0px;
+     position: absolute;
+     width: 100%;
+     top: 100%;
+     transform: translateY(-100%);
+ }
+ 
+/* ---------------------------------------- Team Section ------------------------------------------------------------ */
+
+
+
+#teamMembers .BoxItem{
+   transform: rotateX(-10deg) rotateY(-45deg);
+}
+#teamMembers .BoxItem.onView
+{
+    transform: scale(1.1);
+
+}
+
+/* --------------------------------------------------------Arrows section ------------------------------------------------- */
+.arrowContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    margin-top: 20px;
+}
+.leftArrow,.rightArrow{
+    width: 50px;
+    height: 50px;
+    background-color: var(--mainColor);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.leftArrow:hover, .rightArrow:hover{
+    background-color: var(--mainColor2);
+}
+.leftArrow:hover::after{
+    border: solid var(--mainColor3);
+    border-width: 0px 0px 3px 3px;
+
+}
+.rightArrow:hover::after{
+    border: solid var(--mainColor3);
+    border-width: 0px 3px 3px 0px;
+    
+}
+.leftArrow::after{
+    content: "";
+    border: solid var(--mainColor2);
+    border-width: 0px 0px 3px 3px;
+    padding: 3px;
+    transform: rotate(45deg) translateX(25%);
+   
+}
+.rightArrow::after{
+    content: "";
+    border: solid var(--mainColor2);
+    border-width: 0px 3px 3px 0px;
+    padding: 3px;
+    transform: rotate(-45deg) translateX(-25%);
+
+   
+}
+
+/* ----------------------------------------------------goal section --------------------------------------- */
+
+.specialDiv{
+    height: 200px;
+    position: relative;
+}
+.specialDiv::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--mainColor2);
+    transform: translateY(-20%) skew(0deg, 5deg);
+}
+.specialDiv::before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--mainColor2);
+    transform: translateY(-20%) skew(0deg, -5deg);
+}
+.specialDiv .sectionTitle{
+    padding-top: 65px;
+}
+#goal > div{
+    flex-basis: 50%;
+}
+
+.goalIcon{
+    margin: 5px 10px;
+
+}
+.circleIcon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:  var(--mainColor);
+}
+@media(max-width:768px)
+{
+    .specialDiv{
+        height: 150px;
+    }
+    .specialDiv .sectionTitle{
+        padding-top: 40px;
+    }
+    .circleIcon{
+        width: 15px;
+        height: 15px;
+    }
+
+}
+@media(max-width:550px)
+{
+    .circleIcon{
+        width: 10px;
+        height: 10px;
+    }
+
+}
+@media(max-width:450px)
+{
+    .specialDiv{
+        height: 100px;
+    }
+    .specialDiv .sectionTitle{
+        padding-top: 30px;
+    }
+
+    #goal.flexVC{
+        flex-direction: column;
+    }
+    #goalHeader{
+        width: 95%;
+        margin: auto;
+    }
+
+}
+/* ------------------------------------------------------------------slider section------------------------------------------- */
+#sliderContainer{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    transform-style: preserve-3d;
+    animation: rotate 21s linear infinite;
+    margin-top: 50px;
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+#sliderContainer span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    transform: rotateY(calc(var(--i) * 90deg)) translateZ(150px);
+}
+#sliderContainer span img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: 2s;
+}
+
+#sliderContainer span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
+@media(max-width:768px)
+{
+    #sliderContainer{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media(max-width:450px)
+{
+    #sliderContainer{
+        width: 40px;
+        height: 40px;
+        margin-top: 30px;
+    }
+    #sliderContainer span{
+        transform: rotateY(calc(var(--i) * 90deg)) translateZ(100px);
+    }
+}
+/* -------------------------------------------------------contactUs-------------------------------------------------- */
+
+
+/* ----------------------------------------------plan section ----------------------------------------------------- */
+.plantBenefitsText{
+    width: 100% !important;
+}
+/*  */

@@ -1,16 +1,33 @@
-<div id="goal" class="oddSection section">
-    <div class="specialDiv">
-        <h1 class="mainColor3 sectionTitle">Time to Change</h1>
-    </div>
+<?php
+ $goal = array(
+    [
+        "title" => "Build Perfect Body",
+        "description" => "Nisi sociosqu elit porta viverra orci, porta class pulvinar pharetra auctor Sociis, enim. Gravida habitant integer blandit lacus.",
+    ],
+    [
+        "title" => "Workout Programs",
+        "description" => "Nisi sociosqu elit porta viverra orci, porta class pulvinar pharetra auctor Sociis, enim. Gravida habitant integer blandit lacus."
+    ],
+    [
+        "title" => "Qualified Trainers and Nutritionists",
+        "description" => "Nisi sociosqu elit porta viverra orci, porta class pulvinar pharetra auctor Sociis, enim. Gravida habitant integer blandit lacus.",
+        
+    ]
+    );
+?>
+<div class="specialDiv w100 absolute00 bgColor">
+        <h1 class="mainColor3 sectionTitle textCenter">Time to Change</h1>
+</div>
+<div id="goal" class="oddSection section flexVC relative">
     <div id="goalImg">
-            <img src="<?php echo $imgLocation;?>goal.png" width=100%/>
+            <img src='assets/images/goal.png' width=100%/>
     </div>
-    <div id="goalDetails">
+    <div id="goalTextContainer">
         <div id="goalHeader">
             <h3 class="miniTitle mainColor3">
                 EVERY THING IS POSSIBLE WITH US
             </h3>
-            <p clas="lightText mainColor3">
+            <p class="lightText mainColor3">
             Penatibus amet mus consequat nonummy volutpat pede mollis nec conubia ut. Enim nascetur tristique in hymenaeos neque adipiscing dictum.
             </p>
         </div>
@@ -19,7 +36,7 @@
                 for($i = 0;$i<count($goal);$i++)
                 {
                     echo "
-                            <div class='goalDescription'>
+                            <div class='goalDescription flex w100 pdTB10'>
                                 <div class='goalIcon'>
                                     <div class='circleIcon'></div>
                                 </div>
