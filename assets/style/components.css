@@ -149,6 +149,9 @@
     color: var(--mainColor2);
 }
 /* -------------------------------------------carousel Section -------------------------------------------------------- */
+.carouselRow{
+    width: 100%;
+}
 .carouselRow .wrapper{
     width: 90%;
     margin: auto;
@@ -157,34 +160,66 @@
     column-gap: 5%;
 }
 .carouselRow .BoxItem{
-    flex: 1 0 30%;
-    position: relative;
+    flex: 0 0 30%;
+    width: 30%;
     z-index: 5000;
     transition: 0.5s;
  }
 
+ .BoxItem > div{
+   position: relative;
+ }
+.BoxItem img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
  .BoxItemDetails{
      background-color: var(--mainColor);
      text-align: center;
-     padding: 20px 0px;
-     position: absolute;
+     padding: 10px 0px;
      width: 100%;
-     top: 100%;
-     transform: translateY(-100%);
+     transform: translateY(-10%);
  }
- 
+@media(max-width:850px)
+{
+    .carouselRow .wrapper{
+        column-gap: 10%;
+    }
+    .carouselRow .BoxItem{
+        flex: 0 0 45%;
+     }
+
+}
+@media(max-width:450px)
+{
+    .carouselRow .wrapper{
+        column-gap: 5%;
+    }
+    .carouselRow .BoxItem{
+        flex: 0 0 100%;
+     }
+
+}
+ /* -----------------------------------------classes Section ------------------------------------------------ */
+ #classes .carouselRow .wrapper{
+   overflow-x: hidden;
+}
 /* ---------------------------------------- Team Section ------------------------------------------------------------ */
 
 
-
-#teamMembers .BoxItem{
-   transform: rotateX(-10deg) rotateY(-45deg);
-}
-#teamMembers .BoxItem.onView
+@media(min-width:851px)
 {
-    transform: scale(1.1);
-
+    #teamMembers .BoxItem{
+        transform: rotateX(-10deg) rotateY(-45deg);
+     }
+     #teamMembers .BoxItem.onView
+     {
+         transform: scale(1.1);
+     
+     }
 }
+
 
 /* --------------------------------------------------------Arrows section ------------------------------------------------- */
 .arrowContainer{
@@ -234,6 +269,44 @@
     transform: rotate(-45deg) translateX(-25%);
 
    
+}
+@media(max-width:550px)
+{
+    .arrowContainer{
+        column-gap: 15px;
+        margin-top: 20px;
+    }
+    .leftArrow,.rightArrow{
+        width: 25px;
+        height: 25px;
+    }
+    .leftArrow:hover::after{
+        border: solid var(--mainColor3);
+        border-width: 0px 0px 1.5px 1.5px;
+    
+    }
+    .rightArrow:hover::after{
+        border: solid var(--mainColor3);
+        border-width: 0px 1.5px 1.5px 0px;
+        
+    }
+    .leftArrow::after{
+        content: "";
+        border: solid var(--mainColor2);
+        border-width: 0px 0px 1.5px 1.5px;
+        padding: 1.5px;
+        transform: rotate(45deg) translateX(25%);
+       
+    }
+    .rightArrow::after{
+        content: "";
+        border: solid var(--mainColor2);
+        border-width: 0px 1.5px 1.5px 0px;
+        padding: 1.5px;
+        transform: rotate(-45deg) translateX(-25%);
+    
+       
+    } 
 }
 
 /* ----------------------------------------------------goal section --------------------------------------- */

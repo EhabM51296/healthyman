@@ -80,10 +80,9 @@
                             <div class='BoxItem classItem'>
                                 <div class='w100'>
                                     <img src='assets/images/".$classes[$i]['image']."' class='w100' />
-                                </div>
-                               <div class='BoxItemDetails'>
+                                    <div class='BoxItemDetails'>
                                     <h3 class='miniTitle mainColor2'>".$classes[$i]['name']."</h3>
-                                    <div class='classTimes mgAuto w90 mainColor2 pdTB10 medText'>
+                                    <div class='classTimes mgAuto w90 mainColor2 pdTB10 lightText'>
                                     ";
                                     
                                     for($j = 0; $j < count($classes[$i]["schedule"]["days"]);$j++)
@@ -99,6 +98,8 @@
                                     </div>
                                     <div class='mainColor3 lightText'>".$classes[$i]["description"]."</div>
                                </div>
+                                </div>
+                              
                             </div>
 
                         ";

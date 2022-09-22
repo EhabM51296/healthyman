@@ -48,12 +48,13 @@ $team = array(
                             <div class='BoxItem member'>
                                 <div class='w100'>
                                     <img src='assets/images/".$team[$i]['image']."' class='w100'/>
+                                    <div class='BoxItemDetails'>
+                                        <h3 class='miniTitle mainColor2'>".$team[$i]['name']."</h3>
+                                        <h4 class='medText mainColor3'>".$team[$i]['job']."</h4>
+                                        <p class='lightText mainColor3'>".$team[$i]["certification"]."</p>
+                                    </div>
                                 </div>
-                               <div class='BoxItemDetails'>
-                                    <h3 class='miniTitle mainColor2'>".$team[$i]['name']."</h3>
-                                    <h4 class='medText mainColor3'>".$team[$i]['job']."</h4>
-                                    <p class='lightText mainColor3'>".$team[$i]["certification"]."</p>
-                               </div>
+                              
                             </div>
 
                         ";
